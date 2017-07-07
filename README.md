@@ -114,17 +114,17 @@ Cucumber 是以 feature 文件来组织测试的,所以采用 feature 这个后�
       
 2.  生成测试 Step Definitions；
 
-    *   在 Intellij IDEA 下生成 Steps definitions
+    在 Intellij IDEA 下生成 Steps definitions
         
-        在编写 feature 文件的过程中，IDEA 会提示目前文件中哪些步骤（steps）是没有对应的 Java step definitions，如下图所示，Intellij IDEA 会以黄色的小灯泡这个提示标志来提醒作者：
-        
-        (1)  点击该提示图标，并从弹出的菜单项中选择“Create Step Definition”或者“Create All Steps Definition”；
-   
-        ![create-steps-by-idea.png](quick-start/create-steps-by-idea.png) 
-        
-        (2)  在弹出的“Create New Step Definition File”模式窗口中填写文件名称、实现语言以及文件位置等信息即可；
-           
-        ![create-steps-by-idea2.png](quick-start/create-steps-by-idea2.png)   
+    在编写 feature 文件的过程中，IDEA 会提示目前文件中哪些步骤（steps）是没有对应的 Java step definitions，如下图所示，Intellij IDEA 会以黄色的小灯泡这个提示标志来提醒作者：
+    
+    (1)  点击该提示图标，并从弹出的菜单项中选择“Create Step Definition”或者“Create All Steps Definition”；
+
+    ![create-steps-by-idea.png](quick-start/create-steps-by-idea.png) 
+    
+    (2)  在弹出的“Create New Step Definition File”模式窗口中填写文件名称、实现语言以及文件位置等信息即可；
+       
+    ![create-steps-by-idea2.png](quick-start/create-steps-by-idea2.png)   
 
 3.  运行测试用例。
 
