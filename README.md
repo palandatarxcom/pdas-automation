@@ -128,9 +128,9 @@ Cucumber 是以 feature 文件来组织测试的,所以采用 feature 这个后�
 
 3.  运行测试用例。
 
-    *   Run with JUnit 方式；
+    Run with JUnit 方式；
     
-        这种方式要求必须有 JUnit Test 来触发，常规的做法是：创建一个空白的 JUnit Test，[RunCukesTest](src/test/java/com/rongzi/ms/step_definitions/RunCukesTest.java)
+    这种方式要求必须有 JUnit Test 来触发，常规的做法是：创建一个空白的 JUnit Test，[RunCukesTest](src/test/java/cn/datarx/automation/step_definitions/RunCukesTest.java)
         
         
             package com.rongzi.ms.step_definitions;
