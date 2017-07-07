@@ -10,16 +10,13 @@ Cucumber 有很多种语言的实现版本，例如 Java、Ruby、.NET、JavaScr
 
 
 ## doc
-
 [cucumber-jvm](https://cucumber.io/)
-
 [selenium](http://www.seleniumframework.com/)
 
 
 ## examples
 
 [CucumberJVMExamples](https://github.com/machzqcq/CucumberJVMExamples)
-
 [cucumber-jvm](https://github.com/cucumber/cucumber-jvm/tree/master/examples)
 
 
@@ -156,8 +153,10 @@ Cucumber 是以 feature 文件来组织测试的,所以采用 feature 这个后�
         
 
 ### 运行
-
-运行 `mvn test` 
+1. 运行mvn test去下载driver
+```$shell
+mvn test
+```
 
 ![mvn-test.png](quick-start/mvn-test.png) 
 
