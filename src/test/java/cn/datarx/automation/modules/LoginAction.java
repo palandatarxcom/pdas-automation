@@ -1,7 +1,7 @@
 package cn.datarx.automation.modules;
 
-import cn.datarx.automation.domain.User;
 import cn.datarx.automation.pageobjects.LoginPage;
+import cn.datarx.dto.ums.UserDTO;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,12 +11,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class LoginAction {
 
-    public static void execute(WebDriver driver, User user) {
+    public static void execute(WebDriver driver, UserDTO user) {
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOf(LoginPage.username));
 
-        LoginPage.username.sendKeys(user.getUsername());
+        LoginPage.username.sendKeys(user.getLogin());
         LoginPage.password.sendKeys(user.getPassword());
         LoginPage.login.click();
     }

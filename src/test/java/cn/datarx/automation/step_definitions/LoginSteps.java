@@ -1,16 +1,16 @@
 package cn.datarx.automation.step_definitions;
 
-import cn.datarx.automation.domain.User;
 import cn.datarx.automation.modules.LoginAction;
 import cn.datarx.automation.modules.LogoutAction;
 import cn.datarx.automation.modules.VerifyCaseAddressProceed;
 import cn.datarx.automation.modules.VerifyLoginAddressProceed;
 import cn.datarx.automation.pageobjects.HomePage;
 import cn.datarx.automation.pageobjects.LoginPage;
+import cn.datarx.dto.ums.UserDTO;
+import cn.datarx.dto.ums.UserDetailDTO;
 import cucumber.api.java.zh_cn.假如;
 import cucumber.api.java.zh_cn.当;
 import cucumber.api.java.zh_cn.那么;
-import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -31,7 +31,10 @@ public class LoginSteps extends StepDefs {
     @当("^我登录$")
     public void 我登录() throws Throwable {
         PageFactory.initElements(driver, LoginPage.class);
-        LoginAction.execute(driver, new User("yuanzhencai", "yzc.1234"));
+        UserDTO userDTO = new UserDTO();
+        userDTO.setLogin("yuanzhengcai");
+        userDTO.setPassword("yzc.1234");
+        LoginAction.execute(driver, userDTO);
     }
 
     @那么("^进入首页$")

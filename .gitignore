@@ -141,5 +141,5 @@ cucumber.json
 ######################
 # selenium_standalone
 ######################
-#selenium_standalone
-#selenium_standalone_zips
+selenium_standalone
+selenium_standalone_zips
