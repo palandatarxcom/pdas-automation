@@ -10,7 +10,6 @@ import cn.datarx.automation.pageobjects.LoginPage;
 import cucumber.api.java.zh_cn.假如;
 import cucumber.api.java.zh_cn.当;
 import cucumber.api.java.zh_cn.那么;
-import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 
 /**

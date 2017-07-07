@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 public class VerifyLoginAddressProceed {
 
-	public static void execute(WebDriver driver) throws Exception{
-		assertTrue(driver.getCurrentUrl().equals("http://slave02/studio/#/login"));
+	public static void execute(WebDriver driver){
+		assertTrue(driver.getCurrentUrl().contains("login"));
 	}
 }
