@@ -10,6 +10,6 @@ public class VerifyCaseAddressProceed {
 
 	public static void execute(WebDriver driver) throws Exception{
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until((ExpectedCondition<Boolean>) webDriver -> webDriver.getCurrentUrl().equals("http://slave02/studio/#/cases/all"));
+		wait.until((ExpectedCondition<Boolean>) webDriver -> webDriver.getCurrentUrl().contains("cases/all"));
 	}
 }
