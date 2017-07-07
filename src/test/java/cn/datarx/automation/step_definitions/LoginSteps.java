@@ -32,7 +32,7 @@ public class LoginSteps extends StepDefs {
     public void 我登录() throws Throwable {
         PageFactory.initElements(driver, LoginPage.class);
         UserDTO userDTO = new UserDTO();
-        userDTO.setLogin("yuanzhengcai");
+        userDTO.setLogin("yuanzhencai");
         userDTO.setPassword("yzc.1234");
         LoginAction.execute(driver, userDTO);
     }
