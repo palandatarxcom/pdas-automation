@@ -1,13 +1,12 @@
 package cn.datarx.automation.step_definitions;
 
+import cn.datarx.automation.dto.UserDTO;
 import cn.datarx.automation.modules.LoginAction;
 import cn.datarx.automation.modules.LogoutAction;
 import cn.datarx.automation.modules.VerifyCaseAddressProceed;
 import cn.datarx.automation.modules.VerifyLoginAddressProceed;
 import cn.datarx.automation.pageobjects.HomePage;
 import cn.datarx.automation.pageobjects.LoginPage;
-import cn.datarx.dto.ums.UserDTO;
-import cn.datarx.dto.ums.UserDetailDTO;
 import cucumber.api.java.zh_cn.假如;
 import cucumber.api.java.zh_cn.当;
 import cucumber.api.java.zh_cn.那么;

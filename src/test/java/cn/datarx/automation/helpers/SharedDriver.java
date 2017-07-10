@@ -1,4 +1,4 @@
-package cn.datarx.automation.step_definitions;
+package cn.datarx.automation.helpers;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;

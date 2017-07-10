@@ -1,4 +1,4 @@
-package cn.datarx.automation.step_definitions;
+package cn.datarx.automation;
 
 import org.junit.runner.RunWith;
 

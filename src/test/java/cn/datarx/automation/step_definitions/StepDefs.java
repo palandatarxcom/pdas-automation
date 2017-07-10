@@ -1,5 +1,6 @@
 package cn.datarx.automation.step_definitions;
 
+import cn.datarx.automation.helpers.SharedDriver;
 import org.openqa.selenium.WebDriver;
 
 /**

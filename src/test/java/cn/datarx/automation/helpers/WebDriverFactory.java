@@ -1,7 +1,5 @@
-package cn.datarx.automation.step_definitions;
+package cn.datarx.automation.helpers;
 
-import cn.datarx.automation.helpers.BinaryType;
-import cn.datarx.automation.helpers.Env;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,9 +17,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * Created by lining on 2017/7/2.
- */
 final class WebDriverFactory {
 
     private static Logger logger = Logger.getLogger(WebDriverFactory.class);
@@ -63,7 +58,6 @@ final class WebDriverFactory {
                             System.setProperty(binaries.get(filename), binaryPath);
                             logger.debug("set system property:" + binaryPath);
                         }
-
                     });
         } catch (IOException e) {
             logger.error(e);
