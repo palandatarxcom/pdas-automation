@@ -3,24 +3,24 @@ package cn.datarx.automation.helpers;
 import java.util.ArrayList;
 
 public enum BinaryType {
-    INTERNETEXPLORER(
+    INTERNET_EXPLORER(
             new ArrayList<String>() {{
                 add("IEDriverServer.exe");
             }},
             "webdriver.ie.driver"),
-    GOOGLECHROME(
+    GOOGLE_CHROME(
             new ArrayList<String>() {{
                 add("chromedriver.exe");
                 add("chromedriver");
             }},
             "webdriver.chrome.driver"),
-    PHANTOMJS(
+    PHANTOM_JS(
             new ArrayList<String>() {{
                 add("phantomjs.exe");
                 add("phantomjs");
             }},
             "phantomjs.binary.path"),
-    OPERACHROMIUM(
+    OPERA_CHROMIUM(
             new ArrayList<String>() {{
                 add("operadriver.exe");
                 add("operadriver");
