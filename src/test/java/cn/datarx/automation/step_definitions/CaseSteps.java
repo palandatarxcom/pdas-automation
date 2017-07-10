@@ -7,12 +7,10 @@ import cucumber.api.java.zh_cn.假如;
 import cucumber.api.java.zh_cn.同时;
 import cucumber.api.java.zh_cn.当;
 import cucumber.api.java.zh_cn.那么;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -35,14 +33,15 @@ public class CaseSteps extends StepDefs {
 
     @那么("^进入我负责的案例列表页面$")
     public void 进入我负责的案例列表页面() throws Throwable {
-        PageFactory.initElements(driver, CaseCreatedPage.class);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(CaseCreatedPage.projects_header));
+        wait.until((ExpectedCondition<Boolean>) webDriver -> webDriver.getCurrentUrl().contains("cases/created"));
     }
 
     @假如("^有案例$")
     public void 有案例() throws Throwable {
-        Assert.assertFalse(CaseCreatedPage.cases.isEmpty());
+        PageFactory.initElements(driver, CaseCreatedPage.class);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until((ExpectedCondition<Boolean>) webDriver -> !CaseCreatedPage.cases.isEmpty());
     }
 
     @当("^点击第一个案例$")
