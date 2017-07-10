@@ -1,7 +1,7 @@
 package cn.datarx.automation.modules;
 
+import cn.datarx.automation.dto.UserDTO;
 import cn.datarx.automation.pageobjects.LoginPage;
-import cn.datarx.dto.ums.UserDTO;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
