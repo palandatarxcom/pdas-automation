@@ -24,7 +24,7 @@ node {
     stage('automation tests') {
 
         //run your build
-        sh 'mvn clean verify'
+        sh 'mvn clean verify -Dwebdriver=phantomjs'
         //generate cucumber reports
         cucumber '**/*.json'
 
