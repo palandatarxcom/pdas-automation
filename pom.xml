@@ -18,7 +18,25 @@
         <selenium.version>3.4.0</selenium.version>
         <binary.directory>selenium_standalone</binary.directory>
         <webdriver>chrome</webdriver>
+        <pdas.index>http://palandata.cn</pdas.index>
     </properties>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <pdas.index>http://192.168.3.242/studio</pdas.index>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <pdas.index>http://palandata.cn</pdas.index>
+            </properties>
+        </profile>
+    </profiles>
     <repositories>
         <repository>
             <id>palan</id>

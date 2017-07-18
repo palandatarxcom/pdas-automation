@@ -1,6 +1,7 @@
 package cn.datarx.automation.step_definitions;
 
 import cn.datarx.automation.dto.UserDTO;
+import cn.datarx.automation.helpers.Env;
 import cn.datarx.automation.modules.LoginAction;
 import cn.datarx.automation.modules.LogoutAction;
 import cn.datarx.automation.modules.VerifyCaseAddressProceed;
@@ -19,7 +20,7 @@ public class LoginSteps extends StepDefs {
 
     @假如("^打开首页$")
     public void 打开首页() throws Throwable {
-        driver.get("http://slave02/studio");
+        driver.get(Env.getProperty("pdas.index"));
     }
 
     @那么("^进入登录页面$")

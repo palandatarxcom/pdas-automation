@@ -1,5 +1,6 @@
 package cn.datarx.automation.step_definitions;
 
+import cn.datarx.automation.helpers.Env;
 import cn.datarx.automation.pageobjects.CasePage;
 import cn.datarx.automation.pageobjects.CasePage.CaseCreatedPage;
 import cn.datarx.automation.pageobjects.CasePage.CaseDetailsPage;
@@ -20,7 +21,7 @@ public class CaseSteps extends StepDefs {
 
     @假如("^进入案例页面$")
     public void 进入案例页面() throws Throwable {
-        driver.get("http://slave02/studio/#/cases/all");
+        driver.get(Env.getProperty("pdas.index") + "/#/cases/all");
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until((ExpectedCondition<Boolean>) webDriver -> webDriver.getCurrentUrl().contains("cases/all"));
     }
