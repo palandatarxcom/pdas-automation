@@ -1,6 +1,10 @@
-version: '2'
+version: '2.1'
 services:
     ms-jenkins:
         extends:
-            file: jenkins.yml
+            file: jenkins/jenkins.yml
             service: ms-jenkins
+    ms-zalenium:
+        extends:
+            file: grid/zalenium.yml
+            service: zalenium

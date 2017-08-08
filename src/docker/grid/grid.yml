@@ -1,0 +1,18 @@
+version: '2'
+services:
+  hub:
+    image: selenium/hub:3.3.1
+    environment:
+      - GRID_TIMEOUT=40
+    ports:
+      - 4444:4444
+  firefox:
+    image: selenium/node-firefox:3.3.1
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+  chrome:
+    image: selenium/node-chrome:3.3.1
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
