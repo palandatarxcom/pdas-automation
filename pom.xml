@@ -17,6 +17,7 @@
         <cucumber.picocontainer.version>1.2.5</cucumber.picocontainer.version>
         <selenium.version>3.4.0</selenium.version>
         <binary.directory>selenium_standalone</binary.directory>
+        <downloaded.directory>selenium_standalone_zips</downloaded.directory>
         <webdriver>chrome</webdriver>
         <proxy.enable>false</proxy.enable>
         <proxy.host/>
@@ -130,6 +131,7 @@
                 <configuration>
                     <customRepositoryMap>${project.basedir}/src/test/resources/repo.xml</customRepositoryMap>
                     <rootStandaloneServerDirectory>${binary.directory}</rootStandaloneServerDirectory>
+                    <downloadedZipFileDirectory>${downloaded.directory}</downloadedZipFileDirectory>
                 </configuration>
                 <executions>
                     <execution>
