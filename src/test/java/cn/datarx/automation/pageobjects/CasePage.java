@@ -43,7 +43,7 @@ public class CasePage extends BaseClass {
         @FindBy(how = How.XPATH, using = "//*[@ui-sref=\"requirement\"]")
         public static WebElement document;
 
-        @FindBy(how = How.XPATH, using = "//*[@ui-sref=\"case-flow\"]")
+        @FindBy(how = How.XPATH, using = "//*[@ui-sref=\"case-flow.graph\"]")
         public static WebElement flow;
 
         @FindBy(how = How.XPATH, using = "//*[@ui-sref=\"case-dataset.list\"]")
@@ -52,7 +52,7 @@ public class CasePage extends BaseClass {
         @FindBy(how = How.XPATH, using = "//*[@ui-sref=\"case-analysis.list\"]")
         public static WebElement analysis;
 
-        @FindBy(how = How.XPATH, using = "//*[@ui-sref=\"dashboard\"]")
+        @FindBy(how = How.XPATH, using = "//*[@ui-sref=\"case-notebook.list\"]")
         public static WebElement notebook;
 
 
