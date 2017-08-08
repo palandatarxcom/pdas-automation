@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Properties;
 
 /**
@@ -20,7 +21,7 @@ public class Env {
         properties = new Properties();
 
         try (InputStream in = ClassLoader.getSystemResourceAsStream("env.properties")) {
-            properties.load(in);
+            properties.load(new InputStreamReader(in, "UTF-8"));
         } catch (IOException e) {
             logger.error(e);
         }

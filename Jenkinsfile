@@ -1,33 +1,41 @@
-#!/usr/bin/env groovy
+def profile = "prod"
+def hub = "http://zalenium:4444/wd/hub"
+def browsers = ["chrome", "firefox"]
 
-node {
+def stepsForParallel = [:]
 
-    // add maven to path
-    env.PATH = "${tool 'maven-3.5'}/bin:${env.PATH}"
+for (int i = 0; i < browsers.size(); i++) {
+    def browser = browsers.get(i)
 
-    stage('checkout') {
-        checkout scm
+    def cmd = "mvn clean verify -P${profile} -Dwebdriver=${browser} -Dremote.hub=${hub}"
+    def stepName = "Test ${browser}"
+
+    stepsForParallel[stepName] = mvn(stepName, cmd)
+}
+
+parallel stepsForParallel
+
+def mvn(stepName, cmd) {
+    return {
+        node {
+            env.PATH = "${tool 'maven-3.5'}/bin:${env.PATH}"
+
+            stage('checkout') {
+                checkout scm
+            }
+
+            stage('check java') {
+                sh "java -version"
+            }
+
+            stage('check maven') {
+                sh "mvn -v"
+            }
+
+            stage(stepName) {
+                sh cmd
+                cucumber '**/*.json'
+            }
+        }
     }
-
-    stage('check java') {
-        sh "java -version"
-    }
-
-    stage('check maven') {
-        sh "mvn -v"
-    }
-
-    stage('clean') {
-        sh "mvn clean"
-    }
-
-    stage('automation tests') {
-
-        //run your build
-        sh 'mvn clean verify -Dwebdriver=phantomjs'
-        //generate cucumber reports
-        cucumber '**/*.json'
-
-    }
-
 }

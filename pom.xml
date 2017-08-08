@@ -18,6 +18,10 @@
         <selenium.version>3.4.0</selenium.version>
         <binary.directory>selenium_standalone</binary.directory>
         <webdriver>chrome</webdriver>
+        <proxy.enable>false</proxy.enable>
+        <proxy.host/>
+        <proxy.port/>
+        <remote.hub/>
         <pdas.index>http://palandata.cn</pdas.index>
     </properties>
     <profiles>
