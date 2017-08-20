@@ -42,13 +42,6 @@
             </properties>
         </profile>
     </profiles>
-    <repositories>
-        <repository>
-            <id>palan</id>
-            <url>http://192.168.3.245:8081/content/groups/public/</url>
-            <snapshots><enabled>true</enabled></snapshots>
-        </repository>
-    </repositories>
     <dependencies>
         <dependency>
             <groupId>info.cukes</groupId>
